@@ -1,0 +1,53 @@
+<div class="panel panel-default panel-login center-block">
+  <div class="panel-heading text-center">
+    <strong>Đăng nhập hệ thống</strong>
+  </div>
+  <div class="panel-body">
+    <form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+      <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+        <div class="input-group">
+          <span class="input-group-addon" id="basic-addon1">
+            <i class="fa fa-user"></i>
+          </span>
+          <input type="text" class="form-control" placeholder="Tài khoản" aria-describedby="basic-addon1" name="username" [(ngModel)]="model.username" #username="ngModel" required>
+        </div>
+        <div *ngIf="f.submitted && !username.valid" class="help-block">Cần nhập tài khoản</div>
+      </div>
+      <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+        <div class="input-group">
+          <span class="input-group-addon" id="basic-addon1">
+            <i class="fa fa-lock"></i>
+          </span>
+          <input type="password" class="form-control" placeholder="Mật khẩu" aria-describedby="basic-addon1" name="password" [(ngModel)]="model.password" #password="ngModel" required>
+        </div>
+        <div *ngIf="f.submitted && !password.valid" class="help-block">Cần nhập mật khẩu</div>
+      </div>
+      <div class="form-group">
+        <label>
+            <input type="checkbox" name="remember" [(ngModel)]="model.remember" #remember="ngModel"> Ghi nhớ đăng nhập
+        </label>
+      </div>
+      <div class="form-group">
+          <button type="submit" class="btn btn-primary btn-block" [disabled]="loading">
+              Đăng nhập
+              <i class="fa fa-spinner fa-pulse fa-fw" *ngIf="loading"></i>
+          </button>
+      </div>
+      <alert [type]="'danger'" dismissible="true" *ngIf="error">{{error}}</alert>
+    </form>
+  </div>
+</div>
+
+<md-card>
+   <md-card-subtitle>Subtitle first</md-card-subtitle>
+   <md-card-title>Card with title</md-card-title>
+   <md-card-content>
+        <p>This is supporting text.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
+   </md-card-content>
+   <md-card-actions>
+        <button md-button>LIKE</button>
+        <button md-button>SHARE</button>
+   </md-card-actions>
+</md-card>
