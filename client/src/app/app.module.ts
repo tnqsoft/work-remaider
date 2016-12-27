@@ -15,14 +15,17 @@ import { SharedModule } from './shared/shared.module';
   declarations: [
     AppComponent
   ],
+  entryComponents: [
+    AppComponent
+  ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot(routes),
+    SharedModule.forRoot(),
     LoginModule,
-    DashboardModule,
-    SharedModule.forRoot()
+    DashboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

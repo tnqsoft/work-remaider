@@ -3,7 +3,6 @@ import { NgModule, ModuleWithProviders, CUSTOM_ELEMENTS_SCHEMA } from '@angular/
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { MaterialModule } from '@angular/material';
 
 import { AuthGuard } from './guard';
 import { AuthenticationService, UserService } from './services';
@@ -13,14 +12,12 @@ import { JwtHelper } from './helper';
   imports: [
     CommonModule,
     RouterModule,
-    MaterialModule.forRoot()
   ],
   declarations: [],
   exports: [
     CommonModule,
     RouterModule,
-    FormsModule,
-    // MaterialModule
+    FormsModule
   ],
   providers: [
     AuthGuard,
