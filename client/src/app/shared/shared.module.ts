@@ -6,8 +6,6 @@ import { HttpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import { MaterialModule } from '@angular/material';
-
 import { AuthGuard } from './guard';
 import { AuthenticationService, UserService } from './services';
 import { JwtHelper } from './helper';
@@ -19,7 +17,6 @@ import { JwtHelper } from './helper';
     CommonModule,
     RouterModule,
     FormsModule,
-    MaterialModule.forRoot(),
   ],
   declarations: [],
   exports: [
@@ -28,7 +25,6 @@ import { JwtHelper } from './helper';
     CommonModule,
     RouterModule,
     FormsModule,
-    MaterialModule
   ],
   providers: [
     AuthGuard,

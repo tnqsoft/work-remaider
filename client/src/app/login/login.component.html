@@ -33,19 +33,7 @@
               <i class="fa fa-spinner fa-pulse fa-fw" *ngIf="loading"></i>
           </button>
       </div>
-      <div [type]="'danger'" dismissible="true" *ngIf="error">{{error}}</div>
+      <div *ngIf="error">{{error}}</div>
     </form>
   </div>
 </div>
-
-<md-card class="login-card">
-   <md-card-title>Đăng nhập hệ thống</md-card-title>
-   <md-card-content>
-        <p>This is supporting text.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
-   </md-card-content>
-   <md-card-actions>
-        <button md-raised-button color="primary">Đăng nhập</button>
-   </md-card-actions>
-</md-card>
