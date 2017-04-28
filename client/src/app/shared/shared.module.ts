@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { MATERIAL_DIRECTIVES, MATERIAL_NODE_PROVIDERS } from "ng2-material";
 
 import { AuthGuard } from './guard';
 import { AuthenticationService, UserService } from './services';
@@ -30,8 +31,10 @@ import { JwtHelper } from './helper';
     AuthGuard,
     AuthenticationService,
     UserService,
-    JwtHelper
+    JwtHelper,
+    MATERIAL_NODE_PROVIDERS,
   ],
+  //directives: [MATERIAL_NODE_DIRECTIVES],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 

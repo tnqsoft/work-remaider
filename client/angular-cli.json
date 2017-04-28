@@ -18,10 +18,13 @@
       "prefix": "app",
       "mobile": false,
       "styles": [
-        "../node_modules/font-awesome/scss/font-awesome.scss",
+        "../node_modules/materialize-css/dist/css/materialize.min.css",
+        "../node_modules/material-design-icons/iconfont/material-icons.css",
         "styles.scss"
       ],
       "scripts": [
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/materialize-css/dist/js/materialize.min.js",
         "../node_modules/angular2-ie9-shims/shims_for_IE@2.1.2.js"
       ],
       "environments": {
@@ -32,7 +35,8 @@
     }
   ],
   "addons": [
-    "../node_modules/font-awesome/fonts/*.+(otf|eot|svg|ttf|woff|woff2)"
+    "../node_modules/materialize-css/dist/fonts/roboto/*.+(otf|eot|svg|ttf|woff|woff2)",
+    "../node_modules/material-design-icons/iconfont/*.+(otf|eot|svg|ttf|woff|woff2)"
   ],
   "packages": [],
   "e2e": {
